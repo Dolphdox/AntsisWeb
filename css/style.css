@@ -1,0 +1,159 @@
+@charset "utf-8";
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* 页首 */
+header{
+    display: flex;
+    justify-content: center;
+}
+.header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 54px;
+    flex-wrap: nowrap;
+}
+.logo{
+    font-size: 0;
+}
+.logo:focus{
+    outline: 1px dashed #000;
+    outline-offset: -1px;
+}
+.navbar-nav{
+    display: flex;
+    font-size: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.navbar-nav li{
+    padding: 0.75rem 1rem;
+}
+.navbar-nav li a{
+    font-size: .9rem;
+    color: #262626;
+    box-sizing: border-box;
+    transition: none;
+}
+.navbar-nav li a:hover, .active a, .navbar-nav li a:visited, .navbar-nav li a:focus{
+    border-bottom: 2px solid #000;
+}
+.navbar-nav li a:focus, .navbar-nav li:visited, .navbar-nav li a:visited, .active:focus{
+    outline: 1px dashed #000;
+    outline-offset: .75rem;
+}
+.navbar-toggler{
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
+}
+.navbar-toggler-icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-toggler{
+    display: none;
+}
+/* 媒体查询, 实现响应式导航栏 */
+@media (max-width: 830px){
+    .header>span{
+        width: 48px;
+        height: 40px;
+        margin-left: 1rem;
+    }
+    .logo{
+        padding: 2px 0;
+    }
+    .header{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    .navbar-toggler:visited, .navbar-toggler:focus{
+        outline-color: #000;
+    }
+    
+    .navbar-nav li a:focus, .navbar-nav li:visited, .navbar-nav li a:visited, .active:focus{
+        outline: 1px dashed #000;
+        outline-offset: -1px;
+    }
+
+    .navbar-nav li a:hover, .active a, .navbar-nav li a:visited, .navbar-nav li a:focus{
+        border-bottom: 0;
+    }
+    .active{
+        outline: 1px dashed #000;
+        outline-offset: -2px;
+    }
+    /* 判断.navbar如果没有show类, 则隐藏 */
+    .navbar:not(.show){
+        display: none;
+    }
+    /* 实现三明治 */
+    .show{
+        display: block;
+        position: relative;
+        width: 100%;
+        background-color: #f2f2f2;
+    }
+    .show ul{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .show ul li{
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #e6e6e6;
+        margin-bottom: -1px;
+        padding: 0;
+    }
+    .show ul li a{
+        display: block;
+            font-size: 1rem;
+            padding: 1rem .75rem;
+            color: #262626;
+    }
+    .show ul li a:hover, .active a{
+        outline: 1px dashed #000;
+        outline-offset: -1px;
+        border-bottom: 0;
+    }
+
+} 
+
+/* 页脚 */
+footer{
+    background-color: rgb(63, 63, 63);
+    width: 100%;
+}
+.footer-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    color: #f2f2f2;
+}
