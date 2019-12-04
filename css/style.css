@@ -1,24 +1,24 @@
 @charset "utf-8";
 body{
     margin: 0;
-    padding: 0;
     font-family: 'Segoe UI',SegoeUI,'Microsoft YaHei',微软雅黑,"Helvetica Neue",Helvetica,Arial,sans-serif;
     min-width: 320px;
     color: #000;
     background-color: #fff;
 }
 a{
+    color: #000;
     text-decoration: none;
 }
 ul{
     list-style: none;
 }
 /* 页首 */
-header{
+.nav{
     display: flex;
     justify-content: center;
 }
-.header{
+.nav-container{
     position: relative;
     display: flex;
     align-items: center;
@@ -80,12 +80,12 @@ header{
 }
 /* 媒体查询, 实现响应式导航栏 */
 @media (max-width: 830px){
-    .header>span{
+    .nav-container>span{
         width: 48px;
         height: 40px;
         margin-left: 1rem;
     }
-    .header{
+    .nav-container{
         width: 100%;
         justify-content: space-between;
         align-items: center;
@@ -143,18 +143,19 @@ header{
         outline-offset: -1px;
         border-bottom: 0;
     }
-
 } 
 
 /* 页脚 */
 footer{
     background-color: rgb(63, 63, 63);
     width: 100%;
+    display: flex;
 }
 .footer-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
     padding: 1rem 0;
     color: #f2f2f2;
+}
+.fixed{
+    position: fixed !important;
 }
