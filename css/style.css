@@ -45,7 +45,6 @@ ul{
 .navbar-nav li a{
     font-size: .9rem;
     color: #262626;
-    box-sizing: border-box;
     transition: none;
 }
 .navbar-nav li a:hover, .active a, .navbar-nav li a:visited, .navbar-nav li a:focus{
@@ -97,16 +96,14 @@ ul{
     .navbar-toggler:visited, .navbar-toggler:focus{
         outline-color: #000;
     }
-    
-    .navbar-nav li a:focus, .navbar-nav li:visited, .navbar-nav li a:visited, .active:focus{
-        outline: 1px dashed #000;
-        outline-offset: -1px;
-    }
-
     .navbar-nav li a:hover, .active a, .navbar-nav li a:visited, .navbar-nav li a:focus{
         border-bottom: 0;
     }
-    .active{
+    .navbar-nav li a:focus, .navbar-nav li:visited, .navbar-nav li a:visited, .active:focus{
+        outline: 1px dashed #000;
+        outline-offset: -2px;
+    }
+    .active a, .navbar-nav a:hover{
         outline: 1px dashed #000;
         outline-offset: -2px;
     }
@@ -127,9 +124,8 @@ ul{
     }
     .show ul li{
         width: 100%;
-        box-sizing: border-box;
         border: 1px solid #e6e6e6;
-        margin-bottom: -1px;
+        /* margin-bottom: -1px; */
         padding: 0;
     }
     .show ul li a{
@@ -137,11 +133,6 @@ ul{
             font-size: 1rem;
             padding: 1rem .75rem;
             color: #262626;
-    }
-    .show ul li a:hover, .active a{
-        outline: 1px dashed #000;
-        outline-offset: -1px;
-        border-bottom: 0;
     }
 } 
 
@@ -165,4 +156,3 @@ footer{
     height: 54px;
     width: 90%;
 }
-/* TODO: 相关推荐导航栏有问题， 导致像素有偏移 */
