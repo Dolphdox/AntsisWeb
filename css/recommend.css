@@ -25,7 +25,7 @@
 .row-4 > *{
     width: 25%;
 }
-img{
+.content img{
     width: auto;
     max-width: 100%;
     height: auto;
