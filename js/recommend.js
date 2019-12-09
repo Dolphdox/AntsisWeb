@@ -1,5 +1,6 @@
 
 $("document").ready(function(){
+    
     //按钮关闭
     $("#close").click(function(){
         $(this).parents("#dialog-container").css("background-color","rgb(0, 0, 0, 0)").hide(200).children().animate({
@@ -31,7 +32,6 @@ $("document").ready(function(){
             var name=$(this).siblings("h3").text();
             var p=$(this).siblings("p").text();
             var url=$(this).data("url");
-
             //打开对话框
             $("#dialog-container").css("background-color","rgb(0, 0, 0, 0.9)").show().children().animate({
                 width: "60%",
@@ -50,7 +50,6 @@ $("document").ready(function(){
             var name=$(this).siblings("h3").text();
             var p=$(this).siblings("p").text();
             var url=$(this).data("url");
-
             //打开对话框
             $("#dialog-container").css("background-color","rgb(0, 0, 0, 0.9)").show().children().animate({
                 width: "60%",
@@ -61,5 +60,42 @@ $("document").ready(function(){
             $("<div class='row'><div class='col'><p>"+p+"</p></div></div>").appendTo("#content");
             $("<div class'row'><div class='col'><a class='btn' href='"+url+"'><span>前往主页</span></a></div></div>").appendTo("#content");
         })
+    });
+    var slider = $(".slider"),
+        sC = $(".screen-container"),
+        sI = $(".screen-item"),
+        bW = $(".bar-wrap"),
+        bC = $(".bar-container");
+        bI = $(".bar-item"),
+        current = 0;
+    function moveScreenTo(i){
+        sC.css("left", -slider.width() * i);
+    }
+    function moveBarTo(i){
+        bC.css("left", (bW.width() / 2) - (bI.width() / 2) - $(bI[i]).position().left )
+    }
+    function moveToItem(t){
+        var index;
+        if(typeof t === "number"){
+            index=t;
+        }else{
+            index=$(t).index();
+        }
+        current=index;
+        moveScreenTo(index);
+        moveBarTo(index);
+    }
+    function setSize(){
+        sC.css("width", sC.children().length * slider.width());
+        bC.css("width", (bC.children().length * bI.width()) + ((bC.children().length-1) * 10 ));
+        moveToItem(current);
+    }
+    setSize();
+    bI.click(function(){
+        moveToItem(this);
+    });
+    $(window).resize(function(){
+        setSize();
     })
 })
+

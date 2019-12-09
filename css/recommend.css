@@ -55,6 +55,8 @@
 .content a:hover::after{
     left: 10px;
 }
+
+
 .ai-c{
     align-items: center;
 }
@@ -82,7 +84,7 @@ p{
 
 /* 调整图片大小 */
 .img img{
-    width: 70%;
+    width: 60%;
 }
 
 /* 对话框样式 */
@@ -124,4 +126,97 @@ p{
 .btn{
     padding: .5rem 1rem;
     border: 1px solid #000;
+}
+.img img:hover{
+    opacity: .9;
+}
+.bg1{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    box-shadow: rgb(75, 75, 75) 1px 3px 10px 1px;
+}
+
+.slider{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.screen{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.screen-container{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transition: left 500ms ease-in-out;
+}
+.screen-container a{
+    padding: 0;
+}
+.screen-container p{
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    color: #fff;
+}
+.screen-item{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+.screen-item::after{
+    display: none !important;
+}
+.bar{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+.bar-current{
+    width: 68px;
+    height: 38px;
+    border-radius: 12px;
+    border: 2px solid white;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 5px;
+}
+.bar-wrap{
+    height: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+.bar-container{
+    display: inline-flex;
+    position: absolute;
+    left: 0;
+    transition: left 200ms;
+}
+.bar-item{
+    width: 60px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.85;
+    cursor: pointer;
+}
+.bar-item:not(:last-child){
+    margin-right: 10px;
 }
