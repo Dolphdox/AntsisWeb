@@ -50,7 +50,7 @@
     content: ">";
     height: 23.6px;
     left: 4px;
-    transition: all 200ms ease-in-out;
+    transition: all 200ms;
 }
 .content a:hover::after{
     left: 10px;

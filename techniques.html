@@ -1,47 +1,320 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/techniques.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Antsis - 留言榜</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/techniques.css" />
+    <title>Antsis - 摄影技巧</title>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/style.js"></script>
-    <script src="js/board.js"></script>
-</head>
-<body>
-    <header class="nav">
-        <div class="nav-container">
-            <span></span>
-            <a class="logo" href="index.html"><img alt="logo" src="images/logo.png"></a>
-            <button id="navbar-toggler" class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="navbar" id="navbar">
-                <ul class="navbar-nav">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="picture.html">图片欣赏</a></li>
-                    <li><a href="share.html">调色预设分享</a></li>
-                    <li><a href="recommend.html">相关推荐</a></li>
-                    <li class="active"><a href="#">摄影技巧</a></li>
-                    <li><a href="about.html">关于我们</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <script src="js/techniques.js"></script>
+  </head>
 
+  <body>
+    <header class="nav">
+      <div class="nav-container">
+        <span></span>
+        <a class="logo" href="index.html"
+          ><img alt="logo" src="images/logo.png"
+        /></a>
+        <button id="navbar-toggler" class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar" id="navbar">
+          <ul class="navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="picture.html">图片欣赏</a></li>
+            <li><a href="share.html">调色预设分享</a></li>
+            <li><a href="recommend.html">相关推荐</a></li>
+            <li class="active"><a href="#">摄影技巧</a></li>
+            <li><a href="about.html">关于我们</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="content-container">
-        <div class="main">
+      <div class="menu">
+        <ul>
+          <li class="menu-item menu-active"><a href="#jingwu-h">静物摄影</a></li>
+          <li class="menu-item"><a href="#renxiang-h">人像摄影</a></li>
+          <li class="menu-item"><a href="#fengguang-h">风光摄影</a></li>
+          <li class="menu-item"><a href="#houqi-h">后期调色</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="col">
+          <div class="row item" id="jingwu-h">
+            <div class="col">
+              <h3>静物摄影技巧</h3>
+            </div>
+          </div>
+
+          <div class="row row-2">
+            <div class="col-left">
+              <div class="iframe-wrap">
+                <iframe
+                  src="//player.bilibili.com/player.html?aid=76137001&cid=130242645&page=1"
+                  scrolling="no"
+                  border="0"
+                  frameborder="no"
+                  framespacing="0"
+                  allowfullscreen="true"
+                  data-title="学会用光，千元相机拍出万元质感 佳能60D/单灯/广告级大片拍摄教程"
+                  data-img="images/techniques/jingwu.webp"
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=69115958&cid=119785671&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/jingwu1.webp" alt="" />
+                </div>
+                <p>「物影pro」有质感的产品照是怎么来的，商拍vlog教程</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=61718623&cid=107332341&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/jingwu2.webp" alt="" />
+                </div>
+                <p>
+                  学会用光，两千的相机两万的质感，佳能m50/单灯/广告级大片拍摄教程
+                </p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=67497969&cid=117113590&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/jingwu3.webp" alt="" />
+                </div>
+                <p>「物影PRO」反光板拍大片</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=65710491&cid=114011783&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/jingwu4.webp" alt="" />
+                </div>
+                <p>「物影PRO」渲染级产品摄影布光教程</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="col">
+          <div class="row item" id="renxiang-h">
+            <div class="col">
+              <h3>人像摄影技巧</h3>
+            </div>
+          </div>
+
+          <div class="row row-2">
+            <div class="col-left">
+              <div class="iframe-wrap">
+                <iframe
+                  src="//player.bilibili.com/player.html?aid=74234807&cid=126975298&page=1"
+                  scrolling="no"
+                  border="0"
+                  frameborder="no"
+                  framespacing="0"
+                  allowfullscreen="true"
+                  data-title="【人像摄影】东京雨夜，怎么拍出更好的夜景人像照"
+                  data-img="images/techniques/renxiang.webp"
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=73961998&cid=126504456&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/renxiang1.webp" alt="" />
+                </div>
+                <p>狭小空间怎样实现影棚布光？素人模特大改造</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=68176381&cid=118168246&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/renxiang2.webp" alt="" />
+                </div>
+                <p>单灯人像布光小技巧：教你如何拍出光线柔和的室内人像</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=58263520&cid=101640607&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/renxiang3.webp" alt="" />
+                </div>
+                <p>【肥宅摄影之路】24与JK小姐姐边走边拍！阴天写真实拍！</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=64194944&cid=111461144&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/renxiang4.webp" alt="" />
+                </div>
+                <p>【肥宅摄影之路】28古田桥清新JK实拍 佳能RP+50</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="row item" id="fengguang-h">
+            <div class="col">
+              <h3>风光摄影技巧</h3>
+            </div>
+          </div>
+
+          <div class="row row-2">
+            <div class="col-left">
+              <div class="iframe-wrap">
+                <iframe
+                  src="//player.bilibili.com/player.html?aid=68568913&cid=118836834&page=1"
+                  scrolling="no"
+                  border="0"
+                  frameborder="no"
+                  framespacing="0"
+                  allowfullscreen="true"
+                  data-title="沙漠风景应该如何拍摄？"
+                  data-img="images/techniques/fengguang.webp"
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=71836035&cid=124478167&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/fengguang1.webp" alt="" />
+                </div>
+                <p>原图大揭秘！风光摄影前后期思路分享</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=62101800&cid=107956283&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/fengguang2.webp" alt="" />
+                </div>
+                <p>预测到晚霞才外出？摄影师是如何计划天气和拍摄时机的？</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=77837023&cid=133160544&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/fengguang3.webp" alt="" />
+                </div>
+                <p>
+                  雪天拍摄的“四字诀窍”，带你在海拔4200米的葫芦海拍摄风光大片
+                </p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=68308089&cid=118393797&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/fengguang4.webp" alt="" />
+                </div>
+                <p>西班牙网红打卡地，带你看看星空下的纪念碑谷</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="row item" id="houqi-h">
+            <div class="col">
+              <h3>后期调色技巧</h3>
+            </div>
+          </div>
+
+          <div class="row row-2">
+            <div class="col-left">
+              <div class="iframe-wrap">
+                <iframe
+                  src="//player.bilibili.com/player.html?aid=68757796&cid=119223989&page=1"
+                  scrolling="no"
+                  border="0"
+                  frameborder="no"
+                  framespacing="0"
+                  allowfullscreen="true"
+                  data-title="荒野追逐！INS爆火的暗调青橙色压迫感调色实战分享！"
+                  data-img="images/techniques/houqi.webp"
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=63866035&cid=110886887&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/houqi1.webp" alt="" />
+                </div>
+                <p>晨光中的一抹倩影！INS爆火的背影照片调色思路实战分享！</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=60008458&cid=104505374&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/houqi2.webp" alt="" />
+                </div>
+                <p>INS上爆火的暗金色质感风格调色实战分享</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=58661643&cid=102293196&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/houqi3.webp" alt="" />
+                </div>
+                <p>如何调出小清新甜美风格的底饱和度日系照片！</p>
+              </div>
+              <div
+                class="col"
+                data-url="//player.bilibili.com/player.html?aid=61608528&cid=107147209&page=1"
+              >
+                <div class="img as-c">
+                  <img src="images/techniques/houqi4.webp" alt="" />
+                </div>
+                <p>现代蓝灰色性冷淡金属质感风格调色实战分享</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
-        <div class="footer-main">
-            <p>&copy;蜜蜂小组2019</p>
-        </div>
+      <div class="footer-main">
+        <p>&copy;蜜蜂小组2019</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
