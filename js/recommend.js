@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 $("document").ready(function(){
     
@@ -99,4 +97,3 @@ $("document").ready(function(){
     // TODO: 写一个定时器
 })
 
->>>>>>> 39dd84b6cf0589f22d3e5f0aa564edac7b6f43a0
