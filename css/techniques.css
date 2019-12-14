@@ -1,5 +1,103 @@
 @charset "utf-8";
-body{
-    margin: 0;
+ul{
+    padding-left: 0;
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+.row{
+    display: flex;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.row-4>*{
+    width: 25%;
+    padding: .5rem 1rem;
+    align-items: center;
+}
+.col-left{
+    width: 80%;
+    text-align: center;
+}
+.col-right{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.as-c{
+    align-self: center;
+}
+.row-2>*{
+    padding: 0 1rem;
+}
+.col-right .col{
+    cursor: pointer;
+}
+.iframe-wrap{
+    padding-bottom: 65%;
+    height: 0;
+    width: 100%;
+    position: relative;
+
+}
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+p{
     padding: 0;
+    margin: 0;
+}
+h3{
+    padding: .5rem 4rem 0;
+}
+.menu{
+    height: 100%;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul{
+    font-size: 0;
+}
+.menu-item a{
+    font-size: 1rem;
+    padding: 1.5rem 1.2rem;
+    display: block;
+    color: gray;
+    background-color: #222;
+    transition: background 90ms ease-in-out;
+
+}
+.menu-item a:hover, 
+.menu-active a{
+    color: #fff;
+    background-color: #2e81b0;
+}
+
+@media (max-width: 888px){
+    .menu{
+        display: none;
+    }
+}
+@media (max-height: 400px){
+    .menu{
+        display: none;
+    }
 }
