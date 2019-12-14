@@ -13,9 +13,6 @@
     box-sizing: border-box;
     padding: .5em 1em;
 }
-.col{
-    
-}
 .col > *{
     flex: 1;
 }
