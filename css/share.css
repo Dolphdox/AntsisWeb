@@ -1,45 +1,93 @@
 @charset "utf-8";
 .content{
-    width: 90%;
+    width: 100%;
+}
+.content-container{
+    width: 75%;
     margin: 0 auto;
-    
 }
 .row{
+    position: relative;
     display: flex;
+    background-color: rgb(218, 218, 218);
+    padding: 1rem 0;
+    border-radius: 1.5rem;
+    border: 2px solid rgb(160, 159, 159);
 }
-.col{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: .5em 1em;
+.col-left{
+    width: 70%;
+    padding: 1rem;
 }
-.col > *{
-    flex: 1;
+.slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
-.row-3 > *{
-    width: 33.3333%;
+.slider img{
+    width: 100%;
+    display: block;
 }
-.row-2 > *{
+.slider .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 50%;
+    overflow: hidden;
 }
-.row-4 > *{
-    width: 25%;
+.slider .handle{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 4px;
+    margin-left: -2px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: ew-resize;
 }
-img{
-    width: auto;
+.slider .handle::after{
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin: -1.5rem 0 0 -1.5rem;
+    text-align: center;
+    content: "\21d4";
+    color: #fff;
+    font-size: 2rem;
+    background-color: #ffd05b;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    transition: all 150ms ease;
+}
+.handle.draggable::after {
+    width: 2rem;
+    height: 2rem;
+    margin: -1rem 0 0 -1rem;
+    font-size: 1.3rem;
+}
+
+.col-right{
+    position: relative;
+    width: 30%;
+    display: flex !important;
+    padding: 1rem;
+    flex-direction: column;
+}
+.as-c{
+    align-self: center;
+    margin-bottom: auto;
+}
+.bnt{
+    text-align: center;
+    position: relative;
+    display: block;
     max-width: 100%;
     height: auto;
-}
-.headline{
-    padding-top: 2rem;
-    margin-left: 1em;
-}
-.bg{
-    min-height: 350px;
-    background-image: url("/images/share/bg2.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 100%;
+    padding: 1rem 0;
+    color: rgb(160, 159, 159);
+    background-color: rgb(40, 41, 41);
+    border: 1px solid #000;
+    border-radius: 0.75rem;
 }

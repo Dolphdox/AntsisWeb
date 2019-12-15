@@ -46,6 +46,6 @@ $(document).ready(function(){
     $(".menu-item>a").click(function(){
         $("html,body").stop(true, true).animate({
             scrollTop: ($($(this).attr('href')).offset().top
-            )},1000, "swing");
+            )},500, "swing");
     })
 })
