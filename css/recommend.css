@@ -127,7 +127,7 @@ p{
     padding: .5rem 1rem;
     border: 1px solid #000;
 }
-.img img:hover{
+.content-container .img img:hover{
     opacity: .9;
 }
 .bg1{

@@ -52,7 +52,7 @@ iframe{
     width: 100%;
 }
 
-img{
+.content-container img{
     max-width: 100%;
     height: auto;
     width: auto;

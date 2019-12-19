@@ -1,209 +1,160 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel='stylesheet'  href='css/style.css' type='text/css' />
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
     <title>Antsis - 关于我们</title>
-    <script type='text/javascript' src='js/jquery.min.js'></script>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/style.js"></script>
     <script src="js/about.js"></script>
-     <style>
-        body { font-size: 62.5%; }
-        label, input { display:block; }
-        input.text { margin-bottom:12px; width:95%; padding: .4em; }
-        fieldset { padding:0; border:0; margin-top:25px; }
-        h1 { font-size: 1.2em; margin: .6em 0; }
-        div#users-contain { width: 350px; margin: 20px 0; }
-        div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
-        div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
-        .ui-dialog .ui-state-error { padding: 0.3em; }
-        .validateTips { border: 1px solid transparent; padding: 0.3em; }
- 
-  .on{
-    text-align:center;
-    font-size: 40px;
-    
-  }
-  .one{
-  position:fixed;
-  top: 150px;
-  right: 0;
-}
-.ui-widget{
-    margin:center;
-}
-.onw{
-    font-size: 20px;
-}
-.zi{
-    font-size: 25px;
-    margin-left: 200px;
-}
-.input{
-    outline-style: none ;
-    border: 3px solid #ccc; 
-    border-radius: 3px;
-    padding: 7px 7px;
-    width: 660px;
-    font-size: 24px;
-    margin-left: 700px;
-    margin-top: -48px;
-}
-textarea{
-    outline-style: none ;
-    border: 3px solid #ccc; 
-    border-radius: 3px;
-    padding: 25px 25px;
-    width: 600px;
-    font-size: 24px;
-    margin-top: 48px;
-}
-.bu{
-   margin-left: 804px;
-   height: 25px; 
-}
-.dhead{
-  margin:0 auto;
-  width:754px;
-  height:57px;
-}
-#ddiv{
-  margin:0 auto;
-  width:754px;
-}
-.dcon{
-  width:754px;
-  padding-top:20px;
-  padding-left:200px;
-  font-size: 30px;
-  background-color: blue;
-}
-.dfoot{
-  margin:0 auto;
-  width:754px;
-  height:35px;
-}
-</style>
-<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-<script type="text/javascript" src="js/slider.js"></script>
-
-    <script type="text/javascript">
-    $(function(){
-    $("#button").click(function(){
-        $.ajax({
-          type:"get",
-          url:"index.php",
-          data:$("#form1").serialize(),
-          dataType:"json",
-          beforeSend:function(){
-            console.log("请求准备提交");
-          },
-          success:function(data){
-            console.log("请求成功");
-              $("#ddiv").append("<div class='dcon'>标题: "+data.title+"<br/>用户名: "+data.username+"<br/>内容: "+data.content+"</div>");
-              }
-        })
-           })
-               })
-   </script>
-</head>
-<body>
-    <header>
-        <div class="header">
-            <span></span>
-            <a class="logo" href="index.html"><img alt="logo" src=""></a>
-            <button id="navbar-toggler" class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="navbar" id="navbar">
-                <ul class="navbar-nav">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="picture.html">图片欣赏</a></li>
-                    <li><a href="share.html">调色预设分享</a></li>
-                    <li><a href="recommend.html">相关推荐</a></li>
-                    <li><a href="board.html">留言榜</a></li>
-                    <li class="active"><a href="#">关于我们</a></li>
-                </ul>
-            </nav>
-        </div>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-container">
+        <span></span>
+        <a class="logo" href="index.html"
+          ><img alt="logo" src="images/logo.png"
+        /></a>
+        <button id="navbar-toggler" class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar" id="navbar">
+          <ul class="navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="picture.html">图片欣赏</a></li>
+            <li><a href="share.html">调色预设分享</a></li>
+            <li><a href="recommend.html">相关推荐</a></li>
+            <li><a href="techniques.html">摄影技巧</a></li>
+            <li class="active"><a href="#">关于我们</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <img src="images/1.jpg" alt="">
-    <br><br><br>
 
-    <div class="banner"> 
-    <script type="text/javascript" src="js/slider.js"></script>
-
-<div class="title">关于我们</div>
-<div class="text">
-  <p><em>蜜蜂小组是国内极具人气的设计师学习平台。2012年成立至今，一直专注于设计师的学习成长交流,受到很多摄影爱好者的喜爱.</em></p>
-  <p><em>我们一直坚持开放、分享、成长的宗旨，每周召集众多设计总监、资深设计人员、设计爱好者等杰出人物，分享他们关于职业的技术、理念、思考和探索。</em></p>
-  <p><em>蜜蜂小组在全球权威的Alexa、SimilarWeb排行榜上，国内网站排名已跃进500强，平台矩阵网站经过多年的口碑积累，在行业有着较高影响力，是互联网设计师学习成长的必备优秀站点。</em></p>
-  <p><em>如果有公司合作、合同商谈、广告投放、发布招聘、商务合作等等可以联系我们的QQ：2650232288</em></p>
-  <p><em>鉴于我们公司的品信，我们优设旗下的所有站点一直是这样做的：谢绝平台调性不同且用户体验较差的广告，婉拒各类联盟代码的推广。</em></p>
-  <p><em>以下是在蜜蜂小组投放过广告的各类客户：百度、腾讯、小米、360、乐视、搜狗输入法、锤子科技、视觉中国、123RF、Yestone、拍信、微软Bing图库等.</em></p>
- <p><em>本着线上线下活动双管齐下的原则，优设仅线上公开课已举办超过百场，均是业内前辈及总监级别的公开课。同时丰富多彩的线下活动更是在全国各地每月、每周举行。</em></p>
- <p><em>我们旗下更拥有很多人气中文教程网站如优优教程网，摄影教程网,每日高达30万次访问。</em></p>
- <p><em>蜜蜂小组官网微博@优秀网页设计 从2010年7月运营至今，聚集粉丝超过350万之巨，是微博知名互联网帐号，更是设计行业最具影响力的美学博主。</em></p>
- <p><em>蜜蜂小组与摄影爱好者积极互动，常年举办大型摄影比赛、微影赛、摄影讲座、训练营、摄影展览等线上、线下活动。</em></p>
-          </div>
-     </div>
-</div>
     <div class="content-container">
-    <span class="one"><img src="images/erweima.png" alt=""></span>
-        <div class="main">
-    <div id="dialog-form" title="创建新用户" >
-        <p class="on">所有的表单字段都是必填的!</p> 
-        <table width="1920" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#4C5AF4" bgcolor="#4C5AF4">
-        <form action=""  method="post" name="form1" id="form1">
-        <tr>
-          <td width="1920" align="center" bgcolor="#F9F8EF"><table width="749" border="0" align="center" cellpadding="0"  cellspacing="0"  style="BORDER-COLLAPSE: collapse">
-        <tr>
-          <td height="76" colspan="3" align="left" background="" bgcolor="#4C5AF4" scope="col" class="zi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>姓&nbsp;&nbsp;名：</span><input class="input" name="username" id="username" value=" " maxlength="64" type="text"  />
-            </td>
-        </tr>
-        <tr>
-          <td height="76" colspan="3" align="left" background="" bgcolor="#4C5AF4" scope="col" class="zi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>密&nbsp;&nbsp;码：</span><input class="input" name="title" id="title" value=" " maxlength="64" type="text" size="30" />
-             </td>
-        </tr>
-        <tr>
-        <td height="76" colspan="3" align="left" background="" bgcolor="#4C5AF4" scope="col" class="zi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>内&nbsp;&nbsp;容：&nbsp;&nbsp;&nbsp;&nbsp;<textarea  name="content"
-        cols="60" rows="8" id="content" value=" " maxlength="64"   ></textarea>
+      <div class="bg-img"></div>
 
-          <table width="1920" border="0" align="center" cellpadding="0" cellspacing="0">
-          <tr>
-              <td width="1920" height="50" align="center"><input class="bu" name="button" type="button" id="button" value="填写留言"/>
-             </tr>
-        </table>
-        </td>
-        </tr>      
-        <tr>
-         </tr>
-      </table>  
-    </td>
-    </tr>
-    </form>
-  </table>
+      <div class="about-wrap">
+        <div class="about">
+          <h2>关于我们</h2>
+          <p>
+            蜜蜂小组是国内一个小的摄影交流学习平台。2019年因为要写作业而成立，一直专注于摄影师的学习成长交流,受到很多摄影爱好者的喜爱.我们一直坚持开放、分享、成长的宗旨，每周召集众多设计总监、资深设计人员、设计爱好者等杰出人物，分享他们关于职业的技术、理念、思考和探索。
+            蜜蜂小组在全球权威的Alexa、SimilarWeb排行榜上，国内网站排名已跃进500强，平台矩阵网站经过多年的口碑积累，在行业有着较高影响力，是互联网设计师学习成长的必备优秀站点。
+            如果有公司合作、合同商谈、广告投放、发布招聘、商务合作等等可以联系我们的QQ：8888888
+            鉴于我们公司的品信，我们优设旗下的所有站点一直是这样做的：谢绝平台调性不同且用户体验较差的广告，婉拒各类联盟代码的推广。以下是在蜜蜂小组投放过广告的各类客户：百毒、疼讯、大米、361、乐世、搜猫输入法、锤了科技、视绝中国、微暖Bing图库等.
+            本着线上线下活动双管齐下的原则，优设仅线上公开课已举办超过百场，均是业内前辈及总监级别的公开课。同时丰富多彩的线下活动更是在全国各地每月、每周举行。
+            我们旗下什么都没有，摄影教程网,每日高达0万次访问。
+            蜜蜂小组官网微博@优秀网页设计
+            从2022年7月运营至今，聚集粉丝超过-350万之多，是微勃知名互联网帐号，更是设计行业最具没有影响力的美学博主。
+            蜜蜂小组与摄影爱好者积极互动，常年举办大型摄影比赛、微影赛、摄影讲座、训练营、摄影展览等线上、线下活动。
+          </p>
+        </div>
+      </div>
 
-  <div class="dhead"></div>
-<div id="ddiv">
-</div>
-<div class="dfoot"></div>
+      <div class="contact-wrap">
+        <div class="contact">
+          <h2>联系我们</h2>
+          <p>合作, 咨询, 请联系我们</p>
+          <div class="a-wrap">
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              ><img
+                src="images/about/discord.png"
+                style="width: 50px;"
+                alt="Discord"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              ><img
+                src="images/about/facebook.png"
+                style="width: 50px;"
+                alt="Facebook"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              ><img
+                src="images/about/github.png"
+                style="width: 50px;"
+                alt="Github"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              ><img src="images/about/ins.png" style="width: 50px;" alt="Ins"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              ><img
+                src="images/about/paypal.png"
+                style="width: 50px;"
+                alt="paypal"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              ><img src="images/about/qq.png" style="width: 50px;" alt="QQ"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              ><img
+                src="images/about/twitter.png"
+                style="width: 50px;"
+                alt="Twitter"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="broad-wrap">
+        <div class="broad">
+          <h2>留言榜</h2>
+          <p>你有什么好的建议, 或者想对我们说什么, 请留下你的留言</p>
+          <div class="broad-main">
+            <div class="row">
+              <div class="col col-left">
+                <p>姓名:</p>
+              </div>
+              <div class="col col-right">
+                <input class="right" id="name" type="text" />
+                <span>名字为3~32个字符</span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-left">
+                <p>邮箱:</p>
+              </div>
+              <div class="col col-right">
+                <input class="right" id="email" type="text" />
+                <span>请正确输入邮箱</span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-left">
+                <p>留言:</p>
+              </div>
+              <div class="col col-right">
+                <textarea class="right" rows="3" id="broad"></textarea>
+              </div>
+            </div>
+
+            <a id="submit"><span>提交</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="broad-container">
+        <div class="text-wrap">
+          <!-- <div class="text">
+            <h4>WCZ<span>1q112@qq.com</span></h4>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          </div>   -->
+        </div>
+      </div>
+
     </div>
-    
 
     <footer>
-        <div class="footer-main">
-            <p>&copy;蜜蜂小组2019</p>
-        </div>
+      <div class="footer-main">
+        <p>&copy;蜜蜂小组2019</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

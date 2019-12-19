@@ -10,7 +10,107 @@
     <title>Antsis - 欢迎来到蜜蜂摄影</title>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/style.js"></script>
-    <script src="js/index.js"></script>
+    <style type="text/css">
+
+        p{
+            text-align: center;
+            font-size: 60px;
+            color: cadetblue;
+            font-family: Georgia;
+            padding: 10px;
+
+        }
+
+        .imgBox{
+            border-top: 2px solid cadetblue;
+            width: 80%;
+            height: 450px;
+            margin: 0 auto;
+
+        }
+
+        .imgBox img{
+            width: 100%;
+            height: 450px;
+            margin: 0 auto;
+            padding-top: 10px;
+
+        }
+
+        .img1{
+            display: block;
+        }
+
+        .img2{
+            display: none;
+        }
+
+        .img3{
+            display: none;
+        }
+        .new{
+            padding: 30px;
+
+        }
+        .photo{
+    float:left;
+    width:10%;
+
+        }
+        .intro{
+    float:right;
+    width:55%;
+    padding: 30px;
+        }
+        .ins{
+            padding: 30px;
+            float: left;
+        }
+        .photo1{
+    float:left;
+    width:10%;
+
+        }
+        .intro1{
+    float:right;
+    width:55%;
+    padding: 30px;
+         }
+         .Tv{
+            float: left;
+            padding: 30px;
+         }
+        .tv{
+            float: left;
+            padding: 10px;
+            margin:25px;
+        }
+        .tv1{
+            float: left;
+            padding: 10px;
+            margin:25px;
+        }
+        .tv2{
+            float: left;
+            padding: 10px;
+            margin:25px;
+        }
+    </style>
+    <script type="text/javascript">
+    var index=0;
+   
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    
+    setInterval(ChangeImg,2000);
+</script>
 </head>
 <body>
     <header class="nav">
@@ -34,12 +134,50 @@
     </header>
     <div class="content-container">
         <div class="main">
-        </div>
+        <div class="imgBox">
+    <img class="img-slide img1" src="images/lunimg/1.jpg" alt="1">
+    <img class="img-slide img2" src="images/lunimg/2.jpg" alt="2">
+    <img class="img-slide img3" src="images/lunimg/3.jpg" alt="3">
+    <img class="img-slide img4" src="images/lunimg/4.jpg" alt="4">
+    <img class="img-slide img5" src="images/lunimg/5.jpg" alt="5">
+    
+</div>
     </div>
-
+</div>
+    <p>Welcome&nbsp;&nbsp;to&nbsp;&nbsp; Bee&nbsp;&nbsp; photography&nbsp;&nbsp; website&nbsp;&nbsp;</p>
+    <br>
+    <br>
+    <div class="new">
+    <div class="photo"><img src="images/photo/1111.jpg" width="450" height="300"></div>
+    <div class="intro">
+        <h2><a href="#">带着相机去旅行</a></h2>
+        <p style="font-size: 20px;">生活是一段奇妙的旅行，就在那一去无返的火车上。与那些新人和旧人们共同经历吧！也许这就是一个人无法抗拒的命运，有你、有我、也有他。每个人在他的人生发轫之初，总有一段时光，没有什么可留恋，只有抑制不住的梦想，没有什么可凭仗，只有他的好身体，没有地方可去，只想到处流浪、人生就像一场旅行，不必在乎目的地，在乎的是沿途的风景以及看风景的心情，让心灵去旅行！</p>
+    </div>
+    </div>
+    </div>
+    <div class="ins">
+    <div class="photo1"><img src="images/photo/111.jpg" width="450" height="300"></div>
+    <div class="intro1">
+        <h2><a href="#">最ins照片分享</a></h2>
+        <p style="font-size: 20px;">一根弦若是绷得太紧，总有一天会断裂，一颗心若是禁锢得太久，总有一天会失去平衡，我们需要放飞心灵，让心翱翔在自由的天空。旅行的好处在于可以暂时远离日常生活，还不必承担平日里琐碎的责任。这里有最潮博主分享的图片！</p>
+    </div>
+    </div>
+    </div>
+    <div class="Tv">
+     <h2>摄影记录短片</h2>
+     <div class="tv">
+     <video src="./images/photo/movie.mp4" controls="controls" autoplay="autoplay" width="400" height="300"></video>
+      </div>
+     <div class="tv1">
+     <video src="./images/photo/movie1.mp4" controls="controls" autoplay="autoplay" width="400" height="300"></video>
+     </div>
+     <div class="tv2">
+     <video src="./images/photo/movie2.mp4" controls="controls" autoplay="autoplay" width="400" height="300"></video>
+    </div>
+    </div>
     <footer>
         <div class="footer-main">
-            <p>&copy;蜜蜂小组2019</p>
+            <h4>&copy;蜜蜂小组2019</h4>
         </div>
     </footer>
 </body>

@@ -13,6 +13,7 @@
     padding: 1rem 0;
     border-radius: 1.5rem;
     border: 2px solid rgb(160, 159, 159);
+    margin-top: 1.5rem;
 }
 .col-left{
     width: 70%;
@@ -20,7 +21,7 @@
 }
 .slider{
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     position: relative;
 }
@@ -90,4 +91,13 @@
     background-color: rgb(40, 41, 41);
     border: 1px solid #000;
     border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    transition: all 300ms ease-in-out;
+}
+.bnt:hover{
+    transform: translateY(.7rem);
+}
+.bnt:hover span{
+    border-bottom: 2px solid rgb(160, 159, 159);
 }

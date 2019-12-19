@@ -14,9 +14,17 @@ ul{
     list-style: none;
 }
 /* 页首 */
+.nav-wrap{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
 .nav{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .nav-container{
     position: relative;
@@ -24,6 +32,7 @@ ul{
     align-items: center;
     width: 90%;
     flex-wrap: nowrap;
+    background-color: #fff;
 }
 .logo{
     font-size: 0;
@@ -144,9 +153,9 @@ ul{
     }
     .show ul li a{
         display: block;
-            font-size: 1rem;
-            padding: 1rem .75rem;
-            color: #262626;
+        font-size: 1rem;
+        padding: 1rem .75rem;
+        color: #262626;
     }
 } 
 
@@ -168,7 +177,7 @@ footer{
     position: fixed !important;
     z-index: 10;
 }
-.fill{
+.nav-fill{
     height: 54px;
     width: 90%;
 }
