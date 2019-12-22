@@ -57,6 +57,7 @@ $("document").ready(function(){
         $("<div class'row'><div class='col'><a class='btn' href='"+url+"'><span>前往主页</span></a></div></div>").appendTo("#content");
     
     });
+    //图片展示
     var slider = $(".slider"),
         sC = $(".screen-container"),
         sI = $(".screen-item"),
@@ -93,7 +94,5 @@ $("document").ready(function(){
     $(window).resize(function(){
         setSize();
     })
-
-    // TODO: 写一个定时器
 })
 
