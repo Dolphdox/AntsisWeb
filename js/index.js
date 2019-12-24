@@ -1,36 +1,48 @@
 $(function(){
-    //获取li的长度
-    var len=$(".oLi").length;
-    //把所有li的宽度算好,赋值给ul当宽度
-    $("#banner").width($(".oLi").eq(0).width()*len);
-    //id是为了后面的计时器暂停设置的
-    var id;
-    //index用来统计滚动次数
-    var index=0;
-    //启动计时器
-    id=setInterval(start,3000);
-    //给ul(#banner)添加hover选择器事件
-    $("#banner").hover(function(){
-        //鼠标进入的时候暂停
-        clearInterval(id);
-    },function(){
-        //鼠标离开的时候开始
-        id=setInterval(start,3000);
-    });
-    //计时器中执行的代码块
-    function start(){
-        //执行的时候次数++
-        index++;
-        //用animate设置ul的left属性,与左边的距离
-        $("#banner").animate({'left':-$(".oLi").eq(0).width()*(index%len)});
-        //实现无缝轮播的关键地方
-        //判断index%len的值index%len=0的时候表示第一张,那么len-1表示最后一张,
-        //最后一张与第一张一模一样,所有直接修改left属性
-        if(index%len==(len-1)){
-            $("#banner").animate({'left':0},0);
-            //同时给index+1跳过第一张图的再次加载
-            index++;
-        }
-        //实际的加载情况就是第一张,第二张,第三张,第四张,第五张(瞬间改变图片为第一张的,是一模一样的替换,不是滚动,看不出来,所以称之为无缝轮播),第二张...
+    var size=$(".img li").length;  //首先获取到图片的长度
+    for (var i= 1;i<=size;i++){
+        var li="<li>"+i+"</li>";
+        $(".num").append(li); //动态添加底部小圆点
     }
+    $(".num li").eq(0).addClass("active");
+
+
+    $(".num li").mouseover(function(){
+        $(this).addClass("active").siblings().removeClass("active"); //给你放上的底部圆点添加样式，其它的圆点去掉active样式
+        var index=$(this).index();
+        i=index;
+        $(".img li").eq(index).fadeIn(1000).siblings().fadeOut(1000); //第index个图片淡入，其它的图片淡出
+    });
+    i=0;
+    var t=setInterval(move,2000);// setInterval方法会不停地调用函数,直到 clearInterval() 被调用或窗口被关闭
+    function move(){
+        i++;
+        if(i==size){
+            i=0; //达到图片的尾部时，返回开头
+        }
+        $(".num li").eq(i).addClass("active").siblings().removeClass("active");
+        $(".img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+    }
+
+    function moveL(){
+        i--;
+        if(i==-1){
+            i=size-1;
+        }
+        $(".num li").eq(i).addClass("active").siblings().removeClass("active");
+        $(".img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+    }
+    $(".out").hover(function(){  //鼠标悬停时，停止调用函数
+        clearInterval(t);
+    },function(){    //鼠标移开之后定时器启动
+        t=setInterval(move,1500);
+    });
+
+    $(".out .right").click(function(){
+        move()
+    });
+    $(".out .left").click(function(){
+        moveL()
+    })
+
 });
