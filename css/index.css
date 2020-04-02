@@ -7,17 +7,27 @@ ul{
   list-style: none;
 }
 .out{
-  /*width: 980px;*/
   height: 454px;
-  margin: 30px auto;
+  margin: 0 auto 30px;
   position: relative;
+}
+.img{
+  width: 100%;
+}
+.img span{
+  position: absolute;
+  font-size: 3rem;
+  top: 4rem;
+  left: 6rem;
 }
 .out .img li{
   position: absolute;
+  width: 100%;
+  height: 600px;
   left: 0;
   top: 0;
 }
-.out .num{
+.num{
   position: absolute;
   left:0;
   bottom: -100px;
@@ -25,6 +35,11 @@ ul{
   font-size: 0;
   width: 100%;
 }
+.out img {
+  width: 100%;
+  height: 600px;
+}
+
 .out .btn{
   position: absolute;
   top:50%;
@@ -38,16 +53,15 @@ ul{
   font-size: 40px;
   display: none;
 }
-.out .num li{
-  width: 70px;
-  height: 80px;
+.num li{
+  width: 30px;
+  height: 30px;
   background-color: black;
-  color: #fff;
+  color: rgb(189, 189, 189);
   text-align: center;
-  line-height: 20px;
   border-radius: 50%;
-  display: inline;
-  font-size: 18px;
+  display: inline-block;
+  font-size: 1.2rem;
   margin: 0 10px;
   cursor: pointer;
 }
@@ -68,13 +82,8 @@ ul{
   opacity: 0.8;
   cursor: pointer;    /* 页面显示一个手势样*/
 }
-.out img {
-  /*height: 100%;*/
-  margin:0 auto;
-  width:170%;
-  height: 600px;
 
-}
+
 h1{
 font-size: 25px;
 background-color: #000;

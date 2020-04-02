@@ -32,17 +32,18 @@ $(function(){
         $(".num li").eq(i).addClass("active").siblings().removeClass("active");
         $(".img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
     }
+
     $(".out").hover(function(){  //鼠标悬停时，停止调用函数
         clearInterval(t);
     },function(){    //鼠标移开之后定时器启动
-        t=setInterval(move,1500);
+        t=setInterval(move,2000);
     });
 
     $(".out .right").click(function(){
-        move()
+        move();
     });
     $(".out .left").click(function(){
-        moveL()
+        moveL();
     })
 
 });
